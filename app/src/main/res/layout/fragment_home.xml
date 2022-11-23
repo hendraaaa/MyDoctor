@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeFragment">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/loadingHome"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+
+                android:id="@+id/showHome">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginLeft="14dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profilImage"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@color/blue_600"
+                        android:clickable="true"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toRightOf="@id/profilImage"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="20dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shayna Melinda"
+                            android:textSize="16dp"
+                            android:id="@+id/tvUsername"
+                            android:fontFamily="@font/nunito_semibold"
+                            android:textColor="#112340"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Product Desainer"
+                            android:textSize="12dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/nunito_reguler"
+                            android:textColor="#7D8797" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlPasien"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:visibility="gone">
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Mau Konsultasi dengan siapa hari ini ?"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:textColor="#112340"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTitle"
+                        android:id="@+id/rvKategori"/>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rlDokter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp">
+
+                    <TextView
+                        android:id="@+id/tvTitlee"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Lihat Pasien ku"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:textColor="#112340"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/Pasien"
+                        android:layout_below="@+id/tvTitlee"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardCornerRadius="10dp"
+                        android:background="#EDFCFD"
+                        android:layout_marginRight="20dp"
+                        android:outlineSpotShadowColor="#EDFCFD"
+                        app:cardBackgroundColor="#EDFCFD">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:layout_gravity="center">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:id="@+id/IconKategori"
+                                app:civ_fill_color="#0BCAD4"
+                                android:src="@drawable/pasien"
+
+                                />
+
+                            <TextView
+                                android:layout_marginTop="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cek"
+                                android:textSize="12dp"
+                                android:fontFamily="@font/nunito_reguler"
+                                android:textColor="#112340"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Pasien"
+                                android:textSize="12dp"
+                                android:textStyle="bold"
+                                android:id="@+id/tvKategoriDokter"
+                                android:fontFamily="@font/nunito_reguler"
+                                android:textColor="#112340"/>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp">
+
+                    <TextView
+                        android:id="@+id/tvTitle1"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Top Rated Doctors"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:textColor="#112340"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTitle1"
+                        android:id="@+id/rvTopDokter"
+                        android:nestedScrollingEnabled="false"/>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp">
+
+                    <TextView
+                        android:id="@+id/tvTitle2"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Good News"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:textColor="#112340"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTitle2"
+                        android:id="@+id/rvGoodNews"
+                        android:nestedScrollingEnabled="false"/>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bghospital"
+    android:backgroundTintMode="src_over"
+    android:backgroundTint="#23000000"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Makassar"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:fontFamily="@font/nunito_semibold"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 tersedia"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:fontFamily="@font/nunitolight"
+        android:layout_gravity="center" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="210dp"/>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card"
+        android:padding="15dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rvHospital"
+            tools:listitem="@layout/item_hospital"/>
+    </LinearLayout>
+</LinearLayout>

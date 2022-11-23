@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:backgroundTintMode="src_over"
+    android:backgroundTint="#99000000"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="40dp"
+    tools:context=".GettingStartedActivity">
+
+    <ImageView
+        android:layout_width="86dp"
+        android:layout_height="75dp"
+        android:src="@drawable/logo"/>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="100dp"/>
+    <TextView
+        android:layout_width="244dp"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:fontFamily="@font/nunito_semibold"
+        android:textColor="@android:color/white"
+        android:text="Konsultasi dengan dokter kini jadi lebih mudah dan fleksibel"
+        />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/btnGetStarted"
+        style="@style/RippleStyleWhite"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue_600"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="GetStarted"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:textColor="@android:color/white" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="20dp"/>
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/signUPusr"
+        style="@style/RippleStyleWhite"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="#ffff"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="SIGN UP WITH USER"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:textColor="@android:color/black" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="20dp"/>
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/btnSignUpdkr"
+        style="@style/RippleStyleWhite"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="#ffff"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="SIGN UP WITH DOCTOR"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:textColor="@android:color/black" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+</LinearLayout>

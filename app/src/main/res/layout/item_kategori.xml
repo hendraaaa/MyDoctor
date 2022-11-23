@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="120dp"
+        android:layout_height="130dp"
+        app:cardCornerRadius="10dp"
+        android:background="#EDFCFD"
+        android:layout_marginRight="20dp"
+        android:outlineSpotShadowColor="#EDFCFD"
+        app:cardBackgroundColor="#EDFCFD">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:id="@+id/IconKategori"
+                app:civ_fill_color="#0BCAD4"
+                android:src="@drawable/ic_group"
+
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saya Butuh"
+                android:textSize="12dp"
+                android:fontFamily="@font/nunito_reguler"
+                android:textColor="#112340"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dokter Umum"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:id="@+id/tvKategoriDokter"
+                android:fontFamily="@font/nunito_reguler"
+                android:textColor="#112340"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
